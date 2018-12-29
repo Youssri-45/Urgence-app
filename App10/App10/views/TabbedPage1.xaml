@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="App10.views.TabbedPage1">
+  <!--Pages can be added as references or inline-->
+    <ContentPage Title="Street View">
+        <ContentPage.Content>
+            <StackLayout>
+                <maps:Map  Margin="10" HorizontalOptions="FillAndExpand"
+                         x:Name="mymap"
+                         IsShowingUser="True"
+                         MapType="Street"  />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Satellite View">
+        <ContentPage.Content>
+            <StackLayout>
+                <maps:Map  Margin="10" HorizontalOptions="FillAndExpand"
+                         x:Name="mymap1"
+                         IsShowingUser="True"
+                         MapType="Satellite"  />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+    <ContentPage Title="Hybrid View">
+        <ContentPage.Content>
+            <StackLayout>
+                <maps:Map  Margin="10" HorizontalOptions="FillAndExpand"
+                         x:Name="mymap2"
+                         IsShowingUser="True"
+                         MapType="Hybrid"  />
+            </StackLayout>
+        </ContentPage.Content>
+    </ContentPage>
+</TabbedPage>

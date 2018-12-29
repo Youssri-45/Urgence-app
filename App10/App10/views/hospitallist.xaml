@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App10.views.hospitallist">
+    <ActivityIndicator x:Name="loader" IsRunning="True" Color="Blue"></ActivityIndicator>
+  <ListView x:Name="listv" ItemsSource="{Binding Items}"
+            ItemTapped="Handle_ItemTapped"
+            CachingStrategy="RecycleElement" HasUnevenRows="True">
+
+        
+    <ListView.ItemTemplate>
+      <DataTemplate>
+        <ViewCell>
+          <StackLayout Orientation="Vertical">
+            <Label Text="{Binding Name}" 
+                   Style="{DynamicResource ListItemTextStyle}" TextColor="Black" />
+                        <Label Text="{Binding Address}" 
+                   Style="{DynamicResource ListItemTextStyle}" />
+                    </StackLayout>
+        </ViewCell>
+      </DataTemplate>
+    </ListView.ItemTemplate>
+    
+  </ListView>
+    
+</ContentPage>

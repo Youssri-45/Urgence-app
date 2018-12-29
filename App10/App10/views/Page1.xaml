@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace: App10.Android;assembly= App10.Android"
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="App10.views.Page1">
+    <ScrollView>
+        <StackLayout x:Name="s1">
+            <Image Source="sos.png" WidthRequest="200" HeightRequest="200"></Image>
+
+
+
+            
+            <Button Text="get location" Clicked="Button_Clicked_3" HorizontalOptions="Center" WidthRequest="150" HeightRequest="40" Margin="10" ></Button>
+            <StackLayout HorizontalOptions="Center">
+                <ActivityIndicator x:Name="act" IsRunning="False" Color="Blue" IsVisible="False"></ActivityIndicator>
+                <Label x:Name="loc" Text="your current location is:" Margin="10" TextColor="Black" FontSize="Large" IsVisible="False"></Label>
+                <StackLayout HorizontalOptions="Center">
+                    <Label x:Name="address1"></Label>
+                    <!--Label x:Name="newadr"-->
+                    <Button x:Name="ShowOnMap" Text="Show on map" IsVisible="False" Clicked="ShowOnMap_Clicked"></Button>
+                </StackLayout>
+            </StackLayout>
+            <StackLayout  HorizontalOptions="Center">
+                            <Label Text="Emergency Calls" HorizontalOptions="Center" FontSize="30"></Label>
+                               <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                   <Button Image="police.png" Clicked="Button_Clicked"></Button>
+                                   <Button Image="ambulance.png" Clicked="Button_Clicked_1"></Button>
+                                   <Button Image="fire.png" Clicked="Button_Clicked_2"></Button>
+                               </StackLayout>
+                     </StackLayout>
+            <Grid x:Name="gr">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                <Button x:Name="hosb" Text="nearest hospitals" Clicked="Button_Clicked_4Async" IsEnabled="False" Grid.Row="0" Grid.Column="0" ></Button>
+                    <Button x:Name="polb" Text="nearest police station" Clicked="Button_Clicked_5Async" IsEnabled="False" Grid.Row="0" Grid.Column="1" ></Button>
+                <Button  Text="emergency contacts" Clicked="Button_Clicked_6" BackgroundColor="LightSeaGreen" Grid.Row="0" Grid.Column="2" ></Button>
+            </Grid>
+        </StackLayout>
+        <!--WebView x:Name="web" WidthRequest="1000" HeightRequest="1000"-->
+    </ScrollView>
+</ContentPage>
